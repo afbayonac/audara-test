@@ -1,0 +1,1 @@
+docker run --detach --name audara --env MARIADB_USER=example-root --env MARIADB_PASSWORD=root --env MARIADB_ROOT_PASSWORD=root  mariadb:latest

@@ -75,6 +75,11 @@ const validateForm = (form, formValidations) => {
                     if (/[^\d]/gi.test(String(fieldValue))) vError = true;
                 }
 
+                // numeric
+                else if (validations.type === 'float') {
+                    if (! /^[+-]?\d+(\.\d+)?$/gi.test(String(fieldValue))) vError = true;
+                }
+
                 // If error
                 if (vError) errors[field].push(`type:${validations.type}`);
             }
