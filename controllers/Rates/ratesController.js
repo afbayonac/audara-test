@@ -489,9 +489,8 @@ const changeStatusCallRate = (status) => async (req, res) => {
     return res.status(200).json({
       code: successCode,
       msg: {
-        data: {
-          id: updateRate.insertId,
-          status
+        data:{
+          [status ? "active" : "inactive"]: true
         },
       }
     });  
